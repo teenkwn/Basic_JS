@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inputNum = prompt("please input number");
+            let string = "";
+            let decreaseNumAbove = 1;
+            let decreaseNumBottom = inputNum-1;
+            let line = (inputNum*2)-1;
+            for (let i = 1 ; i <= line; i++){
+                if (i>inputNum) {
+                    for(let j = 1; j <= inputNum; j++){
+                        if(j<=decreaseNumBottom) {
+                            string = string+ decreaseNumBottom.toString()
+                        } else {
+                            string = string+ "-"
+                        }
+                    }
+                    decreaseNumBottom -= 1
+                } else {
+                    for(let j = 1; j <= inputNum; j++){
+                        if(j<=i) {
+                            string = string+ decreaseNumAbove
+                        } else {
+                            string = string+ "-"
+                        }
+                    }
+                    decreaseNumAbove += 1;
+                }
+                string = string + "\n";
+            }
+            console.log(string);
+    </script>
+</body>
+</html>

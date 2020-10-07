@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inputNum = prompt("please input number");
+            let string = "";
+            let star = 1;
+            for (let i = 1 ; i <= inputNum; i++){
+                for(let j = 1; j<= inputNum; j++){
+                    string = string + star.toString()
+                    star = star + 1
+                }
+                string = string + "\n"
+            }
+            console.log(string);
+    </script>
+</body>
+</html>
